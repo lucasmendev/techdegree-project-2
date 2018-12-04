@@ -1,0 +1,322 @@
+/* -----------------
+------ RESET -------
+-------------------*/
+*{
+    box-sizing: border-box;
+}
+
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+.clearfix:after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/* -----------------
+------ BASE --------
+-------------------*/
+html{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+}
+
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* h1,
+h2,
+h3{} */
+
+img{
+    max-width: 100%;
+}
+
+p{
+    text-align: center;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+    .list-item{
+        padding: 1em;
+        margin-left: 0;
+        margin-right: 0;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+        .list-item a:link {
+            color: #000;
+            text-decoration: none;
+        }
+
+a{
+    width: 50px;
+    height: 50px;
+}
+
+.main-header,
+.main-contact,
+.main-footer{
+    background-color: #f4f4f4;
+}
+
+.button-backtop{
+    text-transform: uppercase;
+}
+    .button-backtop a {
+        color: #000;
+        text-decoration: none;
+    }
+
+
+/* ------------------
+------ LAYOUT -------
+-------------------*/
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.box-header,
+.box-profile,
+.box-portfolio,
+.box-content,
+.box-skills,
+.box-contact,
+.box-footer{
+    display: flex;
+}
+
+.box-header{
+    flex-wrap: wrap;
+    align-items: center;
+}
+    .myname{
+        width: 100%;
+        text-align: center;
+    }
+
+.main-nav{
+    width: 100%;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+    .list-item{
+        text-align: center;
+        background-color: #fff;
+        margin-bottom: .5em;
+    }
+
+.box-profile{
+    flex-direction: column;
+    align-items: center;
+}
+    .img-profile{
+        max-width: 70%;
+    }
+
+.box-portfolio {
+    font-weight: bold;
+    justify-content: center;
+}
+
+.box-content{
+    flex-wrap: wrap;
+}
+    .portfolio-1,
+    .portfolio-2,
+    .portfolio-3,
+    .portfolio-4,
+    .portfolio-5,
+    .portfolio-6{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+.box-contact{
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.box-footer{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+    .box-footer p{
+        padding: 0;
+        margin: 2em 1em;
+        font-weight: 900;
+    }
+    .footer-nav{
+        display: none;
+    }
+    .phone,
+    .email{
+        font-weight: 800;
+    }
+
+/* ------------------------
+---------------------------
+------- SKILLS BARS--------
+------------------------ */
+
+/* Container for skill bars */
+.container-skills-bar {
+    max-width: 100%;
+    background-color: snow;
+}
+
+.box-skills{
+    flex-direction: column;
+    padding-bottom: 2em;
+}
+    .box-skills h2 {
+        text-align: center;
+        font-weight: bold;
+        padding: 2em 0 0 0;
+    }
+    .box-skills > p{
+        font-weight: 900;
+    }
+
+.skills {
+    text-align: right;
+    padding-right: 20px;
+    line-height: 40px;
+    color: black;
+    font-weight: bold;
+}
+
+.html {width: 90%; background-color: #4CAF50;}
+.css {width: 80%; background-color: #2196F3; font-weight: 900;}
+.bootstrap {width: 60%; background-color: tomato; font-weight: 900;}
+.js {width: 40%; background-color: yellow; font-weight: 900;}
+
+/* -------------------------
+------ MEDIA QUERIES -------
+--------------------------*/
+
+@media screen and (min-width: 768px){
+    .main-nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    .list-item{
+        display: inline-block;
+        background-color: #f4f4f4;
+        margin: 0 .5em;
+    }
+        .list-item a:link{
+            color: #000;
+            text-decoration: none;
+        }
+    .box-profile{
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 2em 1em;
+    }
+        .img-profile{
+            max-width: 50%;
+        }
+        .description-profile{
+            max-width: 50%;
+            text-align: justify;
+            margin-top: 0;
+            padding-right: 3em;
+            line-height: 2em;
+        }
+    .box-portfolio{
+        padding: 2em 0;
+    }
+
+    .box-content{
+        flex-direction: row;
+    }
+        .portfolio-1,
+        .portfolio-2,
+        .portfolio-3,
+        .portfolio-4,
+        .portfolio-5,
+        .portfolio-6{
+            flex-direction: row;
+            width: 45%;
+        }
+    .box-contact h2{
+        padding: .8em 0;
+    }
+    .box-contact p{
+        width: 50%;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .box-contact > p {
+        padding-bottom: 1em;
+    }
+    .button-backtop{
+      display: none;
+    }
+    .footer-nav{
+      display: flex;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .box-header{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+        .myname{
+            width: 25%;
+            margin-left: .7em;
+        }
+        .main-nav{
+            width: 33%;
+        }
+        .main-nav ul{
+            justify-content: flex-end;
+        }
+
+    .box-content{
+        margin: 0 12.5%;
+    }
+        .portfolio-1,
+        .portfolio-2,
+        .portfolio-3,
+        .portfolio-4,
+        .portfolio-5,
+        .portfolio-6{
+            width: 29%;
+        }
+    .button-backtop{
+        display: none;
+    }
+    .box-footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+        .footer-nav{
+            display: flex;
+            align-self: flex-end;
+        }
+
+}
